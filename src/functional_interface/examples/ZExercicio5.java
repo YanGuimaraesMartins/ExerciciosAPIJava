@@ -12,7 +12,6 @@ public class ZExercicio5 {
         List<Integer> somaMaior5 = new ArrayList<>();
         final int[] somaTotal = {0};
         
-        // Consumer para filtrar e somar os números maiores que 5
         Consumer<Integer> filtraMaior = numero -> {
             if (numero > 5) {
                 somaMaior5.add(numero);
@@ -20,13 +19,10 @@ public class ZExercicio5 {
             }
         };
         
-        // Function para calcular a média
         Function<Integer, Double> calcularMedia = tamanho -> tamanho > 0 ? (double) somaTotal[0] / tamanho : 0.0;
 
-        // Aplicar o Consumer para filtrar e somar
         numeros.forEach(filtraMaior);
         
-        // Calcular e exibir a média
         double media = calcularMedia.apply(somaMaior5.size());
         System.out.println("Média dos números maiores que 5: " + media);
     }
