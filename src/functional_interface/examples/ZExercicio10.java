@@ -12,8 +12,10 @@ public class ZExercicio10 {
 		List<Integer> agrupados = new ArrayList();
 
 		Consumer<Integer> verificaDivisao = numero -> {
-			if (numero % 3 == 0 || numero % 5 == 0) {
-				agrupados.add(numero);
+			if (numero % 2 == 1) {
+				if (numero % 3 == 0 || numero % 5 == 0) {
+					agrupados.add(numero);
+				}
 			}
 		};
 
